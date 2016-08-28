@@ -84,23 +84,20 @@
 
 
 
-<meta name="description" content="title: new: 2016-08-26 21:25:16tags:—
-(转载）如何拖动文件到python脚本中作为输入参数原文地址： http://www.alonely.com.cn/Python/20160814/9079.html
-默认情况下，我们无法拖放一个文件给python脚本让其去处理这个文件，这是因为windows认为python脚本不是一个合法的可拖放的目的对象（drop">
+<meta name="description" content="(转载）如何拖动文件到python脚本中作为输入参数原文地址： http://www.alonely.com.cn/Python/20160814/9079.html
+默认情况下，我们无法拖放一个文件给python脚本让其去处理这个文件，这是因为windows认为python脚本不是一个合法的可拖放的目的对象（drop target）。为了实现拖放目的，我们只需在注册表中配置一下即可，具体做法为：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Rainy008">
 <meta property="og:url" content="http://rainy008.github.io/2016/08/26/new/index.html">
 <meta property="og:site_name" content="Rainy008">
-<meta property="og:description" content="title: new: 2016-08-26 21:25:16tags:—
-(转载）如何拖动文件到python脚本中作为输入参数原文地址： http://www.alonely.com.cn/Python/20160814/9079.html
-默认情况下，我们无法拖放一个文件给python脚本让其去处理这个文件，这是因为windows认为python脚本不是一个合法的可拖放的目的对象（drop">
+<meta property="og:description" content="(转载）如何拖动文件到python脚本中作为输入参数原文地址： http://www.alonely.com.cn/Python/20160814/9079.html
+默认情况下，我们无法拖放一个文件给python脚本让其去处理这个文件，这是因为windows认为python脚本不是一个合法的可拖放的目的对象（drop target）。为了实现拖放目的，我们只需在注册表中配置一下即可，具体做法为：">
 <meta property="og:image" content="http://rainy008.github.io/1b3f5c58-57b2-4185-9881-69d0fb3c473e_files/14722163243050.6219624616205692.png">
-<meta property="og:updated_time" content="2016-08-26T13:37:39.416Z">
+<meta property="og:updated_time" content="2016-08-28T14:22:44.344Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rainy008">
-<meta name="twitter:description" content="title: new: 2016-08-26 21:25:16tags:—
-(转载）如何拖动文件到python脚本中作为输入参数原文地址： http://www.alonely.com.cn/Python/20160814/9079.html
-默认情况下，我们无法拖放一个文件给python脚本让其去处理这个文件，这是因为windows认为python脚本不是一个合法的可拖放的目的对象（drop">
+<meta name="twitter:description" content="(转载）如何拖动文件到python脚本中作为输入参数原文地址： http://www.alonely.com.cn/Python/20160814/9079.html
+默认情况下，我们无法拖放一个文件给python脚本让其去处理这个文件，这是因为windows认为python脚本不是一个合法的可拖放的目的对象（drop target）。为了实现拖放目的，我们只需在注册表中配置一下即可，具体做法为：">
 <meta name="twitter:image" content="http://rainy008.github.io/1b3f5c58-57b2-4185-9881-69d0fb3c473e_files/14722163243050.6219624616205692.png">
 
 
@@ -289,9 +286,7 @@
       
 
       
-        <hr>
-<p>title: new: 2016-08-26 21:25:16<br>tags:—</p>
-<h1 id="转载）如何拖动文件到python脚本中作为输入参数"><a href="#转载）如何拖动文件到python脚本中作为输入参数" class="headerlink" title="(转载）如何拖动文件到python脚本中作为输入参数"></a>(转载）如何拖动文件到python脚本中作为输入参数</h1><p>原文地址： <a href="http://www.alonely.com.cn/Python/20160814/9079.html" target="_blank" rel="external">http://www.alonely.com.cn/Python/20160814/9079.html</a></p>
+        <h1 id="转载）如何拖动文件到python脚本中作为输入参数"><a href="#转载）如何拖动文件到python脚本中作为输入参数" class="headerlink" title="(转载）如何拖动文件到python脚本中作为输入参数"></a>(转载）如何拖动文件到python脚本中作为输入参数</h1><p>原文地址： <a href="http://www.alonely.com.cn/Python/20160814/9079.html" target="_blank" rel="external">http://www.alonely.com.cn/Python/20160814/9079.html</a></p>
 <p>默认情况下，我们无法拖放一个文件给python脚本让其去处理这个文件，这是因为windows认为python脚本不是一个合法的可拖放的目的对象（drop target）。为了实现拖放目的，我们只需在注册表中配置一下即可，具体做法为：</p>
 <p>新建.reg文件，文件名随意，内容为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Windows Registry Editor Version 5.00</div><div class="line"></div><div class="line">[HKEY_CLASSES_ROOT\Python.File\shellex\DropHandler]</div><div class="line">@=&quot;&#123;60254CA5-953B-11CF-8C96-00AA00B8708C&#125;&quot;</div></pre></td></tr></table></figure></p>
 <p>保存后执行。</p>
