@@ -84,18 +84,18 @@
 
 
 
-<meta name="description" content="pip">
+<meta name="description" content="pip更改国内安装源，升级、使用命令及离线使用方法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pip 使用全解析">
-<meta property="og:url" content="http://rainy008.github.io/2017/06/04/pip 使用全解析/index.html">
+<meta property="og:url" content="http://rainy008.github.io/2017/06/05/pip 使用全解析/index.html">
 <meta property="og:site_name" content="Rainy008">
-<meta property="og:description" content="pip">
-<meta property="og:image" content="http://rainy008.github.io/G:\Python\笔记\pip命令.jpg">
-<meta property="og:updated_time" content="2017-06-04T16:04:28.918Z">
+<meta property="og:description" content="pip更改国内安装源，升级、使用命令及离线使用方法">
+<meta property="og:image" content="http://rainy008.github.io/2017/06/05/pip 使用全解析/pip命令.jpg">
+<meta property="og:updated_time" content="2017-06-05T14:03:22.255Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pip 使用全解析">
-<meta name="twitter:description" content="pip">
-<meta name="twitter:image" content="http://rainy008.github.io/G:\Python\笔记\pip命令.jpg">
+<meta name="twitter:description" content="pip更改国内安装源，升级、使用命令及离线使用方法">
+<meta name="twitter:image" content="http://rainy008.github.io/2017/06/05/pip 使用全解析/pip命令.jpg">
 
 
 
@@ -255,8 +255,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-06-04T23:48:43+08:00" content="2017-06-04">
-              2017-06-04
+            <time itemprop="dateCreated" datetime="2017-06-05T21:43:43+08:00" content="2017-06-05">
+              2017-06-05
             </time>
           </span>
 
@@ -285,8 +285,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/06/04/pip 使用全解析/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/04/pip 使用全解析/" itemprop="commentsCount"></span>
+                <a href="/2017/06/05/pip 使用全解析/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/05/pip 使用全解析/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -309,8 +309,8 @@
       
 
       
-        <h1 id="pip-使用全解析"><a href="#pip-使用全解析" class="headerlink" title="pip 使用全解析"></a>pip 使用全解析</h1><p>python3.4以后自带pip，无需再安装。</p>
-<h3 id="1、使用国内安装源"><a href="#1、使用国内安装源" class="headerlink" title="1、使用国内安装源"></a>1、使用国内安装源</h3><p>​    用pip安装依赖包时默认访问<code>https://pypi.Python.org/simple/</code>，但是经常出现不稳定以及访问速度非常慢的情况，国内厂商提供的pipy镜像速度快、稳定，目前可用的有：</p>
+        <p>python3.4以后自带pip，无需再安装。</p>
+<h1 id="1、使用国内安装源"><a href="#1、使用国内安装源" class="headerlink" title="1、使用国内安装源"></a>1、使用国内安装源</h1><p>​    用pip安装依赖包时默认访问<code>https://pypi.Python.org/simple/</code>，但是经常出现不稳定以及访问速度非常慢的情况，国内厂商提供的pipy镜像速度快、稳定，目前可用的有：</p>
 <p>​    清华：<a href="https://pypi.tuna.tsinghua.edu.cn/simple" target="_blank" rel="external">https://pypi.tuna.tsinghua.edu.cn/simple</a></p>
 <p>​    阿里云：<a href="http://mirrors.aliyun.com/pypi/simple/" target="_blank" rel="external">http://mirrors.aliyun.com/pypi/simple/</a></p>
 <p>​    中国科技大学 <a href="https://pypi.mirrors.ustc.edu.cn/simple/" target="_blank" rel="external">https://pypi.mirrors.ustc.edu.cn/simple/</a></p>
@@ -321,16 +321,16 @@
 <p>​    在C:\Users\R\文件夹下创建pip文件夹，然后在其中创建pip.ini文件进行配置，最后路径为C:\Users\R\pip\pip.ini。</p>
 <p>​    pip.ini文件内容如下（使用科技大的镜像）：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[global]</div><div class="line">index-url = https://pypi.mirrors.ustc.edu.cn/simple/</div><div class="line">trusted-host=pypi.mirrors.ustc.edu.cn</div></pre></td></tr></table></figure>
-<h3 id="2、pip升级"><a href="#2、pip升级" class="headerlink" title="2、pip升级"></a>2、pip升级</h3><p>​    Windows下pip升级命令：</p>
+<h1 id="2、pip升级"><a href="#2、pip升级" class="headerlink" title="2、pip升级"></a>2、pip升级</h1><p>​    Windows下pip升级命令：</p>
 <p>​     <code>python -m  pip install --upgrade pip</code> 或 <code>python -m pip install -u pip</code></p>
-<h3 id="3、pip命令"><a href="#3、pip命令" class="headerlink" title="3、pip命令"></a>3、pip命令</h3><p><img src="G:\Python\笔记\pip命令.jpg" alt="pip命令"></p>
+<h1 id="3、pip命令"><a href="#3、pip命令" class="headerlink" title="3、pip命令"></a>3、pip命令</h1><p><img src="/2017/06/05/pip 使用全解析/pip命令.jpg" alt="pip命令"></p>
 <p>​    <strong>对于不熟悉的pip命令，要善用–help，例如：</strong></p>
 <p>​    <strong><code>pip install -h</code>或者<code>pip install --help</code></strong></p>
-<h3 id="4、批量升级包"><a href="#4、批量升级包" class="headerlink" title="4、批量升级包"></a>4、批量升级包</h3><p>​    用循环实现批量升级包（注意–upgrade后面的空格）</p>
+<h1 id="4、批量升级包"><a href="#4、批量升级包" class="headerlink" title="4、批量升级包"></a>4、批量升级包</h1><p>​    用循环实现批量升级包（注意–upgrade后面的空格）</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> pip</div><div class="line"><span class="keyword">from</span> subprocess <span class="keyword">import</span> call</div><div class="line"></div><div class="line"><span class="keyword">for</span> dist <span class="keyword">in</span> pip.get_installed_distributions():</div><div class="line">    print(<span class="string">"Package Name: "</span>+ dist.project_name)</div><div class="line">    call(<span class="string">"pip install --upgrade "</span> + dist.project_name, shell=<span class="keyword">True</span>)</div></pre></td></tr></table></figure>
 <p>​    另外的也可以使用 <a href="https://github.com/jgonggrijp/pip-review" target="_blank" rel="external">pip-review</a> 模块，不过还有安装（不推荐）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pip install pip-review</div><div class="line">pip-review --local --interactive</div></pre></td></tr></table></figure>
-<h3 id="5、pip离线使用"><a href="#5、pip离线使用" class="headerlink" title="5、pip离线使用"></a>5、pip离线使用</h3><pre><code>当不能联网而使用python时，你会遇到各种关于安装、使用包的坑，你会疑惑、沮丧、痛苦，甚至绝望……
+<h1 id="5、pip离线使用"><a href="#5、pip离线使用" class="headerlink" title="5、pip离线使用"></a>5、pip离线使用</h1><pre><code>当不能联网而使用python时，你会遇到各种关于安装、使用包的坑，你会疑惑、沮丧、痛苦，甚至绝望……
 </code></pre><p>​    直到有一天，你突然知道pip原来可以离线安装包……</p>
 <p>​    你发现原来大神就是大神，创造python的大神们早已为你准备好了一切，只是你自己一直徘徊在单机的苦难中，没有找到通往“便捷”的天堂之道……</p>
 <p>​    你又重拾起沿着python之路一往无前的勇气，向着人机自由交流的光明未来继续前行……</p>
@@ -343,7 +343,7 @@
 <p>​    最后，将D:\packages文件夹中的包拷贝到不能联网的电脑上，运行命令<code>pip install install --no-index --find-links=d:\packages -r requirements.txt</code>，requirements.txt文件中所列的包就安装到未联网的电脑上了</p>
 <p>​    从此，再不用痛苦包的问题了！！！</p>
 <p>关于 download 和 install 命令的具体用法，现用现help :-)</p>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
 <li><a href="http://stackoverflow.com/questions/7225900/how-to-pip-install-packages-according-to-requirements-txt-from-a-local-directory" target="_blank" rel="external">http://stackoverflow.com/questions/7225900/how-to-pip-install-packages-according-to-requirements-txt-from-a-local-directory</a></li>
 </ul>
 <ul>
@@ -437,8 +437,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/06/04/pip 使用全解析/"
-           data-title="pip 使用全解析" data-url="http://rainy008.github.io/2017/06/04/pip 使用全解析/">
+      <div class="ds-thread" data-thread-key="2017/06/05/pip 使用全解析/"
+           data-title="pip 使用全解析" data-url="http://rainy008.github.io/2017/06/05/pip 使用全解析/">
       </div>
     
   </div>
@@ -529,7 +529,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#pip-使用全解析"><span class="nav-number">1.</span> <span class="nav-text">pip 使用全解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、使用国内安装源"><span class="nav-number">1.0.1.</span> <span class="nav-text">1、使用国内安装源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、pip升级"><span class="nav-number">1.0.2.</span> <span class="nav-text">2、pip升级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、pip命令"><span class="nav-number">1.0.3.</span> <span class="nav-text">3、pip命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、批量升级包"><span class="nav-number">1.0.4.</span> <span class="nav-text">4、批量升级包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、pip离线使用"><span class="nav-number">1.0.5.</span> <span class="nav-text">5、pip离线使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">1.0.6.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1、使用国内安装源"><span class="nav-number">1.</span> <span class="nav-text">1、使用国内安装源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2、pip升级"><span class="nav-number">2.</span> <span class="nav-text">2、pip升级</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3、pip命令"><span class="nav-number">3.</span> <span class="nav-text">3、pip命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4、批量升级包"><span class="nav-number">4.</span> <span class="nav-text">4、批量升级包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5、pip离线使用"><span class="nav-number">5.</span> <span class="nav-text">5、pip离线使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
           </div>
         </section>
