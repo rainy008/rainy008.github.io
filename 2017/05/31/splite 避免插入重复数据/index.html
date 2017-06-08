@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python 学习者" />
+  <meta name="keywords" content="模块使用,sql," />
 
 
 
@@ -84,15 +84,16 @@
 
 
 
-<meta name="description" content="留下记忆足迹，记录所学所想">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Rainy008">
-<meta property="og:url" content="http://rainy008.github.io/categories/pycharm/index.html">
+<meta name="description" content="splite避免插入重复数据">
+<meta property="og:type" content="article">
+<meta property="og:title" content="splite避免插入重复数据">
+<meta property="og:url" content="http://rainy008.github.io/2017/05/31/splite 避免插入重复数据/index.html">
 <meta property="og:site_name" content="Rainy008">
-<meta property="og:description" content="留下记忆足迹，记录所学所想">
+<meta property="og:description" content="splite避免插入重复数据">
+<meta property="og:updated_time" content="2017-06-05T14:21:28.097Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Rainy008">
-<meta name="twitter:description" content="留下记忆足迹，记录所学所想">
+<meta name="twitter:title" content="splite避免插入重复数据">
+<meta name="twitter:description" content="splite避免插入重复数据">
 
 
 
@@ -110,7 +111,7 @@
   };
 </script>
 
-  <title> 分类: pycharm | Rainy008 </title>
+  <title> splite避免插入重复数据 | Rainy008 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -131,7 +132,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -219,47 +220,182 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        pycharm
-        <small>分类</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                splite避免插入重复数据
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-05-31T10:18:43+08:00" content="2017-05-31">
+              2017-05-31
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/SQL/" itemprop="url" rel="index">
+                    <span itemprop="name">SQL</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/05/31/splite 避免插入重复数据/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/31/splite 避免插入重复数据/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p>用insert语句插入数据，避免重复插入又不打断数据处理，语句用法如下：</p>
+<p>  <code>INSERT OR IGNORE INTO tablename (id) VALUES (2)</code></p>
+<p>  在表中设置了id字段，该字段为UNIQUE属性，当插入的id已存在时引发冲突。<br> <strong>引发冲突后 insert会做一些处理，处理方式由OR字句定义</strong>。包含如下：</p>
+<p> <em>ROLLBACK</em>  当发生约束冲突，立即结束当前事务处理，命令中止并返回SQLITE_CONSTRAINT代码。若当前无活动事务(除了每一条命令创建的默认事务以外)，则该算法与ABORT相同。</p>
+<p> <em>ABORT</em>   当发生约束冲突，命令收回已经引起的改变并中止返回SQLITE_CONSTRAINT。但由于不执行ROLLBACK，所以前面的命令产生的改变将予以保留。缺省采用这一行为。</p>
+<p> <em>FAIL</em>  当发生约束冲突，命令中止返回SQLITE_CONSTRAINT。但遇到冲突之前的所有改变将被保留。例如，若一条UPDATE语句在100行遇到冲突100th，前99行的改变将被保留，而对100行或以后的改变将不会发生。</p>
+<p> <em>IGNORE</em>   当发生约束冲突，发生冲突的行将不会被插入或改变。但命令将照常执行。在冲突行之前或之后的行将被正常的插入和改变，且不返回错误信息。</p>
+<p> <em>REPLACE</em>  当发生UNIQUE约束冲突，先存在的，导致冲突的行在更改或插入发生冲突的行之前被删除。这样，更改和插入总是被执行。命令照常执行且不返回错误信息。当发生NOT NULL约束冲突，导致冲突的NULL值会被字段缺省值取代。若字段无缺省值，执行ABORT算法</p>
+<p>参见<a href="http://blog.csdn.net/shangxinlei88/article/details/42078265" target="_blank" rel="external">http://blog.csdn.net/shangxinlei88/article/details/42078265</a></p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2017/06/08/(转载) pycharm快捷键及一些常用设置/" itemprop="url">
-              
-                <span itemprop="name">(转载)pycharm快捷键及一些常用设置</span>
-              
-            </a>
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/path/to/wechat-reward-image" alt="Rainy008 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/path/to/alipay-reward-image" alt="Rainy008 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-06-08T22:31:43+08:00"
-              content="2017-06-08" >
-          06-08
-        </time>
-      </div>
 
-    </header>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/模块使用/" rel="tag">#模块使用</a>
+          
+            <a href="/tags/sql/" rel="tag">#sql</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/28/(转载) python requests模块的使用/" rel="next" title="python requests模块的使用">
+                <i class="fa fa-chevron-left"></i> python requests模块的使用
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/05/pip 使用全解析/" rel="prev" title="pip 使用全解析">
+                pip 使用全解析 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </section>
 
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -267,6 +403,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/05/31/splite 避免插入重复数据/"
+           data-title="splite避免插入重复数据" data-url="http://rainy008.github.io/2017/05/31/splite 避免插入重复数据/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -286,8 +430,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -337,6 +490,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -433,6 +597,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
